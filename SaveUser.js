@@ -21,14 +21,30 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-    var user = getCookie("username");
+    var userName = document.getElementById("username").innerText;
+    var user = getCookie(userName);
     if (user != "") {
-        alert("Welcome again " + user);
+
     } else {
-        user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) {
-            setCookie("username", user, 365);
-        }
+        setCookie(userName, user, 4);
     }
 }
-checkCookie();
+function saveEdits() {
+    checkCookie();
+    var editElem = document.getElementById("theories");
+
+    var userVersion = editElem.innerHTML;
+
+    localStorage.userEdits = userVersion;
+    alert("The edit was saved")
+}
+
+function checkEdits() {
+    //find out if the user has previously saved edits
+    if(localStorage.userEdits!=null)
+        document.getElementById("theories").innerHTML = localStorage.userEdits;
+}
+function makeEditable(){
+   var theories = document.getElementById("theories");
+   theories.setAttribute("contenteditable", "true");
+}

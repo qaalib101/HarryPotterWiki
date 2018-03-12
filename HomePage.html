@@ -16,13 +16,23 @@
 
     <script src = "SaveUser.js"></script>
 </head>
-<body>
+<div>
 <div class="container">
     <div class="page-header">
         <h1 id = "page_heading">
             Harry Potter Fan Theories
         </h1>
     </div>
+</div>
+<div>
+    <form id = "username">
+    <p>Username:
+        <input type = "text" name="username"/>
+    </p>
+</form>
+
+    <button onclick="makeEditable()">Edit</button>
+    <button onclick="saveEdits()">Save Edits</button>
 </div>
 <div>
     <h2>
@@ -121,7 +131,7 @@
         </li>
     </ol>
 </div>
-<div id = "theory1" contenteditable="true">
+<div id="theories" onload="checkEdits()">
     <h2>Professor Dumbledore invented the time-turner credit: Obversa via Reddit</h2>
     <img src = "Images/Carousel/theory1.jpg" class="theoryImages">
     <h3>In this theory Dumbledore is to have created the time turner that Harry, Ron and Hermione use to go back in time.
@@ -190,8 +200,7 @@
              Last, but not least, J.K. Rowling revealed that Gellert Grindelwald is (was?) "a Seer" - meaning that, not only can he give Prophecies, but he also has an ability related to control of time - or, more specifically, "seeing into the future with his Inner Eye". Albus Dumbledore also once told Harry Potter that "seeing into the future is incredibly difficult, because of the complexity of every single action and their consequences". However, there is one thing that can "secure the future" - and that's time-travel. If you can travel through time - and control "every single action and their consequences" - that sounds something exactly like something Dumbledore would research (at least, in his youth)
          </li>
      </ul>
-</div>
-<div id = "theory2" contenteditable="true">
+
     <h2>Dumbledore is Merlin</h2>
     <img src="Images/Carousel/theory2.jpg" class="theoryImages">
     <h3>This theory is about proving Dumbledore is a time traveling Merlin. Both are regarded as the most powerful
@@ -302,8 +311,7 @@
     <blockquote>
         "I knew my brother, Potter. He learned secrecy at our mother's knee. Secrets and lies, that's how we grew up, and Albus... he was a natural... How can you be sure, Potter, that my brother wasn't more interested in the greater good than in you? How can you be sure you aren't dispensable, just like my little sister?"
     </blockquote>
-</div>
-<div id = "theory3" contenteditable="true">
+
     <h2>Dumbledore is Death. Severus, Harry and Voldemort are represented as the Peverell brothers</h2>
     <img src="Images/Carousel/theory3.jpg" class="theoryImages">
     <h3>Dumbledore is Death who came after the three. Harry is lke the youngest who greeted death like a friend. Severus is like
